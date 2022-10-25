@@ -1,0 +1,25 @@
+syntax = "proto3";
+package proto;
+
+option java_multiple_files = true;
+option java_package = "org.example.entity";
+option java_outer_classname = "UserServiceProto";
+
+message RegisterReq {
+  // 手机号
+  string Phone = 1;
+  // 用户ID
+  string UserId = 2;
+}
+
+message RegisterRsp {
+  // 业务状态码
+  int32 code = 1;
+  // 信息
+  string msg = 2;
+}
+
+service UserService {
+  // 注册接口
+  rpc register(RegisterReq) returns (RegisterRsp);
+}
