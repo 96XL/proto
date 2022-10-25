@@ -21,7 +21,6 @@
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-netty</artifactId>
@@ -58,6 +57,7 @@
             <version>${jackson.version}</version>
         </dependency>
     </dependencies>
+
     <build>
         <extensions>
             <extension>
